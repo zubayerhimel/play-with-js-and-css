@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variables</title>
+  </head>
+  <style>
+    :root {
+      --base: #ffc600;
+      --spacing: 10px;
+      --blur: 10px;
+    }
+    img {
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
+    .h1 {
+      color: var(--base);
+    }
+
+    /* basic styles, nothing to do with the css variables */
+    body {
+      text-align: center;
+      color: rgb(177, 217, 252);
+      background: #2c4f68;
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 100;
+      font-size: 40px;
+    }
+    .controls {
+      margin-bottom: 50px;
+    }
+    img {
+      height: 50%;
+      width: 50%;
+    }
+  </style>
+  <body>
+    <h2>Update CSS Variables with <span class="h1">JS</span></h2>
+    <div class="controls">
+      <label for="spacing">Spacing:</label>
+      <!-- data-sizing is not a default tag. its a custom tag. you can name anything with a prefix "data-" -->
+      <input
+        type="range"
+        name="spacing"
+        min="10"
+        max="200"
+        value="10"
+        data-sizing="px"
+      />
+
+      <label for="blur">Blur:</label>
+      <input
+        type="range"
+        name="blur"
+        min="0"
+        max="25"
+        value="10"
+        data-sizing="px"
+      />
+
+      <label for="base">Base Color</label>
+      <input type="color" name="base" value="#ffc600" />
+    </div>
+
+    <img src="./bg.jpg" alt="bg" />
+
+    <script>
+      // get all the controls of input
+      const inputs = document.querySelectorAll(".controls input");
+      function handleUpdate() {
+        //   suffix is used to get the "data-sizing" element which contains "px"
+        const suffix = this.dataset.sizing || "";
+        // set value of spacing, blur and base color
+        document.documentElement.style.setProperty(
+          `--${this.name}`,
+          this.value + suffix
+        );
+      }
+      //   when something is changed, works fine with base color. also works with spacing and blur but when value changed
+      inputs.forEach((input) => input.addEventListener("change", handleUpdate));
+      //   works great with spacing and blur as mouse is moved
+      inputs.forEach((input) =>
+        input.addEventListener("mousemove", handleUpdate)
+      );
+    </script>
+  </body>
+</html>
