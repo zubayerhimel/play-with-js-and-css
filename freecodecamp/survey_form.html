@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Survey Form</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: rgb(60, 73, 73);
+        color: honeydew;
+        margin: 5rem;
+        text-align: center;
+        font-family: "Balsamiq Sans", cursive;
+      }
+      #title {
+        font-size: 3rem;
+        letter-spacing: 4px;
+        text-decoration: underline;
+      }
+      #description {
+        color: rgb(231, 191, 105);
+      }
+      label {
+        text-align: left;
+        margin-bottom: 0.5rem;
+      }
+      input {
+        margin-bottom: 1.5rem;
+      }
+      #input_field {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      #inputdata {
+        text-align: left;
+      }
+      textarea {
+        width: 50%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Survey Form</h1>
+      <p id="description">
+        We need some data of yours for research purpose. Thank you for taking
+        the survey.
+      </p>
+    </header>
+    <form action="" id="survey-form">
+      <div id="input_field">
+        <label for="name-label" id="name-label">Name</label>
+        <input
+          type="text"
+          placeholder="Enter your name"
+          name="name"
+          id="name"
+          required
+        />
+        <label for="email-label" id="email-label">Email</label>
+        <input
+          type="email"
+          placeholder="Enter your email"
+          name="email"
+          id="email"
+          required
+        />
+        <label for="number-label" id="number-label"
+          >Number of cars you want</label
+        >
+        <input
+          type="number"
+          placeholder="Enter your number"
+          name="number"
+          id="number"
+          min="1"
+          max="5"
+          required
+        />
+      </div>
+      <br />
+
+      <div id="inputdata">
+        <label for="dropdown">Select desired car model</label>
+        <select id="dropdown">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+      <br />
+
+      <div id="inputdata">
+        <label for="gender">Select your gender</label><br />
+        <input type="radio" id="male" name="name" value="male" />
+        <label for="male">Male</label><br />
+        <input type="radio" id="female" name="name" value="female" />
+        <label for="female">Female</label><br />
+        <input type="radio" id="other" name="name" value="other" />
+        <label for="other">Other</label>
+      </div>
+      <br />
+
+      <div id="inputdata">
+        <label for="checkbox">What do you currently have?</label><br />
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+        <label for="vehicle1"> I have a bike</label><br />
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+        <label for="vehicle2"> I have a car</label><br />
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
+        <label for="vehicle3"> I have a boat</label><br />
+      </div>
+
+      <div id="inputdata">
+        <label for="textarea">Write something about your interested cars.</label
+        ><br />
+        <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+      </div>
+
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+</html>
