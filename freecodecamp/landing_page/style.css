@@ -1,0 +1,159 @@
+:root {
+  --color: rgb(219, 245, 236);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Baloo 2", cursive;
+  background-color: rgb(0, 0, 0);
+  color: var(--color);
+  margin: 2em;
+}
+main {
+  text-align: center;
+}
+#header-img {
+  height: 50px;
+  width: 80px;
+}
+#nav-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background: rgb(0, 0, 0);
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+#nav-links {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+#nav-links li {
+  list-style: none;
+}
+.nav-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--color);
+  letter-spacing: 2px;
+}
+
+.nav-link:hover {
+  border-bottom: 1px solid rgb(219, 245, 236);
+  transition: 0.7s;
+}
+.section {
+  min-height: 100vh;
+}
+#home {
+  height: 80vh;
+  background: url(./audi.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-family: "Sacramento", cursive;
+  font-size: 8rem;
+  color: rgb(235, 255, 221);
+  text-shadow: 0 3px 10px rgb(51, 228, 81);
+}
+h5 {
+  font-size: 2rem;
+  color: var(--color);
+}
+h2 {
+  font-size: 4rem;
+}
+#about {
+  margin: 5rem;
+}
+#em-video {
+  margin: 1rem;
+}
+p {
+  text-align: justify;
+}
+span {
+  font-size: 2rem;
+  color: aquamarine;
+}
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid rgb(232, 249, 221);
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 5px rgba(53, 235, 241, 0.2);
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid rgb(214, 245, 232);
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+.button {
+  background-color: RGB(234, 249, 221);
+  border: none;
+  color: rgb(59, 73, 73);
+  border-radius: 5%;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+input[type="email"] {
+  height: 50px;
+  width: 50%;
+  border-radius: 5%;
+  box-shadow: 0 3px 3px 1px rgb(219, 245, 236);
+}
+input[type="submit"] {
+  background-color: RGB(234, 249, 221);
+  border: none;
+  color: rgb(59, 73, 73);
+  border-radius: 5%;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
