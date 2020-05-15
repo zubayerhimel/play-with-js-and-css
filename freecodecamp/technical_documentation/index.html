@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="sidebar" id="navbar">
+      <header id="heading">Java Tutorial</header>
+      <a class="nav-link" href="#Home">Home</a>
+      <a class="nav-link" href="#Environment_setup">Environment setup</a>
+      <a class="nav-link" href="#Data_types">Data types</a>
+      <a class="nav-link" href="#Variable_type">Variable types</a>
+      <a class="nav-link" href="#Loop">Loop</a>
+      <a class="nav-link" href="#Strings">Strings</a>
+      <a class="nav-link" href="#Reference">Reference</a>
+    </nav>
+    <main id="main-doc">
+      <div class="content">
+        <section class="main-section" id="Home">
+          <header>Home</header>
+          <p>
+            Java is a high-level programming language originally developed by
+            Sun Microsystems and released in 1995. Java runs on a variety of
+            platforms, such as Windows, Mac OS, and the various versions of
+            UNIX. This tutorial gives a complete understanding of Java. This
+            reference will take you through simple and practical approaches
+            while learning Java Programming language.
+          </p>
+          <o:p></o:p>
+          <p>
+            Java is a MUST for students and working professionals to become a
+            great Software Engineer specially when they are working in Software
+            Development Domain. I will list down some of the key advantages of
+            learning Java Programming:
+          </p>
+          <br />
+          <ul>
+            <li>
+              <b>Object Oriented</b> − In Java, everything is an Object. Java
+              can be easily extended since it is based on the Object model.
+            </li>
+            <li>
+              <b>Platform Independent</b> - Unlike many other programming
+              languages including C and C++, when Java is compiled, it is not
+              compiled into platform specific machine, rather into platform
+              independent byte code. This byte code is distributed over the web
+              and interpreted by the Virtual Machine (JVM) on whichever platform
+              it is being run on.
+            </li>
+            <li>
+              <b>Simple</b> - Java is designed to be easy to learn. If you
+              understand the basic concept of OOP Java, it would be easy to
+              master.
+            </li>
+            <li>
+              <b>Secure</b> - With Java's secure feature it enables to develop
+              virus-free, tamper-free systems. Authentication techniques are
+              based on public-key encryption.
+            </li>
+          </ul>
+        </section>
+
+        <section class="main-section" id="Environment_setup">
+          <header>Environment setup</header>
+          <p>
+            If you are still willing to set up your environment for Java
+            programming language, then this section guides you on how to
+            download and set up Java on your machine. Following are the steps to
+            set up the environment. Java SE is freely available from the link
+            Download Java. You can download a version based on your operating
+            system. Follow the instructions to download Java and run the .exe to
+            install Java on your machine. Once you installed Java on your
+            machine, you will need to set environment variables to point to
+            correct installation directories −
+          </p>
+          <br />
+          <p>
+            Setting Up the Path for Windows Assuming you have installed Java in
+            c:\Program Files\java\jdk directory − Right-click on 'My Computer'
+            and select 'Properties'. Click the 'Environment variables' button
+            under the 'Advanced' tab. Now, alter the 'Path' variable so that it
+            also contains the path to the Java executable. Example, if the path
+            is currently set to 'C:\WINDOWS\SYSTEM32', then change your path to
+            read 'C:\WINDOWS\SYSTEM32;c:\Program Files\java\jdk\bin'.
+          </p>
+        </section>
+
+        <section class="main-section" id="Data_types">
+          <header>Data types</header>
+          <h2>byte</h2>
+          <ul>
+            <li>
+              Byte data type is an 8-bit signed two's complement integer
+            </li>
+            <li>Minimum value is -128 (-2^7)</li>
+            <li>Maximum value is 127 (inclusive)(2^7 -1)</li>
+            <li>Default value is 0</li>
+            <li>
+              Byte data type is used to save space in large arrays, mainly in
+              place of integers, since a byte is four times smaller than an
+              integer.
+            </li>
+            <li>Example: byte a = 100, byte b = -50</li>
+          </ul>
+          <h2>short</h2>
+          <ul>
+            <li>Short data type is a 16-bit signed two's complement integer</li>
+            <li>Minimum value is -32,768 (-2^15)</li>
+            <li>Maximum value is 32,767 (inclusive) (2^15 -1)</li>
+            <li>
+              Short data type can also be used to save memory as byte data type.
+              A short is 2 times smaller than an integer
+            </li>
+            <li>Default value is 0.</li>
+            <li>Example: short s = 10000, short r = -20000</li>
+          </ul>
+        </section>
+
+        <section class="main-section" id="Variable_types">
+          <header>Variable types</header>
+          <p>
+            A variable provides us with named storage that our programs can
+            manipulate. Each variable in Java has a specific type, which
+            determines the size and layout of the variable's memory; the range
+            of values that can be stored within that memory; and the set of
+            operations that can be applied to the variable. You must declare all
+            variables before they can be used. Following is the basic form of a
+            variable declaration −
+            <code
+              >data type variable [ = value][, variable [ = value] ...] ;</code
+            >
+          </p>
+          <p>
+            Here data type is one of Java's datatypes and variable is the name
+            of the variable. To declare more than one variable of the specified
+            type, you can use a comma-separated list. Following are valid
+            examples of variable declaration and initialization in Java −
+            <code
+              >int a, b, c; // Declares three ints, a, b, and c. <br />int a =
+              10, b = 10; // Example of initialization <br />byte B = 22; //
+              initializes a byte type variable B. <br />double pi = 3.14159; //
+              declares and assigns a value of PI. <br />char a = 'a'; // the
+              char variable a iis initialized with value 'a'</code
+            >
+          </p>
+        </section>
+
+        <section class="main-section" id="Loop">
+          <header>Loop</header>
+          <p>
+            There may be a situation when you need to execute a block of code
+            several number of times. In general, statements are executed
+            sequentially: The first statement in a function is executed first,
+            followed by the second, and so on.
+          </p>
+          <br />
+          <code>
+            for(declaration : expression) { // Statements }
+          </code>
+          <br />
+          <p>
+            Declaration − The newly declared block variable, is of a type
+            compatible with the elements of the array you are accessing. The
+            variable will be available within the for block and its value would
+            be the same as the current array element. Expression − This
+            evaluates to the array you need to loop through. The expression can
+            be an array variable or method call that returns an array.
+          </p>
+          <br />
+          <pre>
+public class Test {
+
+    public static void main(String args[]) {
+        int [] numbers = {10, 20, 30, 40, 50};
+
+        for(int x : numbers ) {
+            System.out.print( x );
+            System.out.print(",");
+        }
+        System.out.print("\n");
+        String [] names = {"James", "Larry", "Tom", "Lacy"};
+
+        for( String name : names ) {
+            System.out.print( name );
+            System.out.print(",");
+        }
+    }
+    }
+          </pre>
+        </section>
+
+        <section class="main-section" id="Strings">
+          <header>Strings</header>
+          <p>
+            Strings, which are widely used in Java programming, are a sequence
+            of characters. In Java programming language, strings are treated as
+            objects. The Java platform provides the String class to create and
+            manipulate strings.
+          </p>
+          <br />
+          <h2>Creating Strings</h2>
+          <p>The most direct way to create a string is to write −</p>
+          <br />
+          <code>String greeting = "Hello world!";</code><br /><br />
+          <p>
+            Whenever it encounters a string literal in your code, the compiler
+            creates a String object with its value in this case, "Hello world!'.
+            As with any other object, you can create String objects by using the
+            new keyword and a constructor. The String class has 11 constructors
+            that allow you to provide the initial value of the string using
+            different sources, such as an array of characters.
+          </p>
+          <code>hello.</code>
+          <br />
+          <pre>
+public class StringDemo {
+
+    public static void main(String args[]) {
+        char[] helloArray = { 'h', 'e', 'l', 'l', 'o', '.' };
+        String helloString = new String(helloArray);
+        System.out.println( helloString );
+    }
+}
+          </pre>
+        </section>
+
+        <section class="main-section" id="Reference">
+          <header>Reference</header>
+          <p>
+            All content are taken from
+            <a href="https://www.tutorialspoint.com/java/" target="_blank"
+              >Tutorials point</a
+            >
+          </p>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

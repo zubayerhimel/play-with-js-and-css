@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #000000;
+  color: #ddf8fd;
+  font-family: "Noto Sans", sans-serif;
+}
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #000000;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  color: antiquewhite;
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+.content {
+  border-left: 1px solid rgb(35, 215, 228);
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+#heading {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 5px;
+  font-size: 2rem;
+  color: #a2fcff;
+  text-shadow: 0 5px 3px #acf3e7;
+  border-bottom: 1px solid #acf3e7;
+}
+section {
+  margin: 2rem;
+}
+header {
+  font-family: "Dosis", sans-serif;
+  font-size: 3rem;
+  text-align: left;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+p {
+  line-height: 1.8rem;
+}
+li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+li b {
+  text-decoration: underline;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+code {
+  background: rgb(54, 54, 54);
+  color: #ffe600;
+}
+pre {
+  background: rgb(54, 54, 54);
+  color: #ffe600;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
