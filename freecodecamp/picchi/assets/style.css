@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+body {
+  font-family: "Baloo 2", cursive;
+  text-align: center;
+}
+.styling-font {
+  font-family: "Parisienne", cursive;
+  font-weight: 500;
+  text-shadow: -2px -4px 6px rgba(150, 150, 150, 0.81);
+}
+.font-gradient {
+  background: -webkit-linear-gradient(rgb(5, 9, 241), rgb(21, 238, 202));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rounded {
+  border-radius: 12px;
+}
+.v-align {
+  vertical-align: middle;
+}
+.btn {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 29%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  /* background-color: rgb(0, 17, 255) !important; */
+  width: 7rem;
+  border-radius: 6px;
+  color: antiquewhite;
+  font-weight: 600;
+}
+.input-field input:focus + label {
+  color: rgb(0, 17, 255) !important;
+}
+/* label underline focus color */
+.row .input-field input:focus {
+  border-bottom: 1px solid rgb(0, 17, 255) !important;
+  box-shadow: 0 1px 0 0 rgb(0, 17, 255) !important;
+}
+
+.card {
+  -webkit-box-shadow: 3px 7px 44px -4px rgba(199, 193, 199, 1);
+  -moz-box-shadow: 3px 7px 44px -4px rgba(199, 193, 199, 1);
+  box-shadow: 3px 7px 44px -4px rgba(199, 193, 199, 1);
+}
+
+/* balloon */
+.balloon {
+  display: inline-block;
+  width: 120px;
+  height: 145px;
+  background: hsl(215, 50%, 65%);
+  border-radius: 80%;
+  position: relative;
+  box-shadow: inset -10px -10px 0 rgba(0, 0, 0, 0.07);
+  margin: 20px 30px;
+  transition: transform 0.5s ease;
+  z-index: 10;
+  animation: balloons 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes balloons {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(4deg);
+  }
+}
+
+.balloon:before {
+  content: "▲";
+  font-size: 20px;
+  color: hsl(215, 30%, 50%);
+  display: block;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: -12px;
+  z-index: -100;
+}
+
+.balloon:after {
+  display: inline-block;
+  top: 153px;
+  position: absolute;
+  height: 250px;
+  width: 1px;
+  margin: 0 auto;
+  content: "";
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.balloon:nth-child(2) {
+  background: rgba(182, 15, 97, 0.9);
+  animation-duration: 3.5s;
+}
+.balloon:nth-child(2):before {
+  color: rgba(182, 15, 97, 0.9);
+}
+
+.balloon:nth-child(3) {
+  background: rgba(242, 112, 45, 0.9);
+  animation-duration: 3s;
+}
+.balloon:nth-child(3):before {
+  color: rgba(242, 112, 45, 0.9);
+}
+
+.balloon:nth-child(4) {
+  background: hsl(229, 88%, 49%);
+  animation-duration: 4.5s;
+}
+.balloon:nth-child(4):before {
+  color: hsl(229, 88%, 49%);
+}
+
+.balloon:nth-child(5) {
+  background: hsl(180, 82%, 69%);
+  animation-duration: 5s;
+}
+.balloon:nth-child(5):before {
+  color: hsl(180, 82%, 69%);
+}
+/* ballon end */
+/* #heart {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+} */
+/* #heart:before,
+#heart:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: rgb(240, 192, 192);
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+#heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+} */
