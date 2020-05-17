@@ -11,18 +11,14 @@
 span {
   text-transform: uppercase;
 }
-/* .container {
+.container {
   font-family: "Acme", sans-serif;
   width: 800px;
   height: 400px;
   padding: 10px;
   margin: 0 auto;
-  background: whitesmoke;
   position: relative;
   border-radius: 20px;
-} */
-.balloon {
-  font-family: "Acme", sans-serif;
 }
 h1 {
   position: relative;
@@ -31,7 +27,7 @@ h1 {
   color: var(--burg);
   font-size: 3.5em;
   font-family: "Pacifico", cursive;
-  background: -webkit-linear-gradient(rgb(5, 9, 241), rgb(213, 21, 238));
+  background: -webkit-linear-gradient(rgb(16, 0, 238), rgb(176, 6, 228));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -52,7 +48,7 @@ h1 {
   position: absolute;
   padding: 10px;
   box-shadow: inset 17px 7px 10px var(--burg);
-  -webkit-transform-origin: bottom center;
+  transform-origin: bottom center;
 }
 .balloon > div:nth-child(1) {
   background: var(--burg);
@@ -142,6 +138,16 @@ span {
   top: 30px;
   left: 50%;
   margin-left: -27px;
+}
+#msg {
+  margin-top: 0.5em;
+  margin-left: 6em;
+  margin-right: 6em;
+  font-family: "Baloo 2", cursive;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+  line-height: 2rem;
+  color: rgb(23, 64, 245);
 }
 
 /*BALLOON 1 4*/
