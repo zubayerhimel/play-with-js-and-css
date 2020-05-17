@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Acme&family=Kalam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 :root {
   --burg: rgba(182, 15, 97, 0.9);
   --orange: rgba(242, 112, 45, 0.9);
@@ -10,7 +11,7 @@
 span {
   text-transform: uppercase;
 }
-.container {
+/* .container {
   font-family: "Acme", sans-serif;
   width: 800px;
   height: 400px;
@@ -19,6 +20,20 @@ span {
   background: whitesmoke;
   position: relative;
   border-radius: 20px;
+} */
+.balloon {
+  font-family: "Acme", sans-serif;
+}
+h1 {
+  position: relative;
+  top: 200px;
+  text-align: center;
+  color: var(--burg);
+  font-size: 3.5em;
+  font-family: "Pacifico", cursive;
+  background: -webkit-linear-gradient(rgb(5, 9, 241), rgb(213, 21, 238));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .balloon {
@@ -279,11 +294,4 @@ span {
   50% {
     transform: translate(-15px, 10px) rotate(10deg);
   }
-}
-h1 {
-  position: relative;
-  top: 200px;
-  text-align: center;
-  color: var(--burg);
-  font-size: 3.5em;
 }

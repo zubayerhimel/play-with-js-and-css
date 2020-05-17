@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Picchi</title>
     <link rel="stylesheet" href="assets/style2.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <div class="container">
-      <div class="balloon">
-        <div><span>😊</span></div>
+      <div data-aos="fade-right" data-aos-duration="3000" class="balloon">
+        <div><span>☺</span></div>
         <div><span>B</span></div>
         <div><span>D</span></div>
         <div><span>A</span></div>
         <div><span>Y</span></div>
         <div><span>!</span></div>
       </div>
-      <h1>Happy Birthday Dear Picchi</h1>
+      <h1 data-aos="fade-left" data-aos-duration="3000">
+        Happy Birthday Dear Picchi
+      </h1>
     </div>
+    <div id="balloon-container"></div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
