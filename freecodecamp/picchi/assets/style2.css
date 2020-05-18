@@ -24,12 +24,17 @@ h1 {
   position: relative;
   top: 200px;
   text-align: center;
-  color: var(--burg);
   font-size: 3.5em;
   font-family: "Pacifico", cursive;
   background: -webkit-linear-gradient(rgb(16, 0, 238), rgb(176, 6, 228));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+}
+h1:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .balloon {

@@ -5,7 +5,7 @@ body {
 }
 .styling-font {
   font-family: "Parisienne", cursive;
-  font-weight: 500;
+  font-weight: 600;
   text-shadow: -2px -4px 6px rgba(150, 150, 150, 0.81);
 }
 .font-gradient {
@@ -17,9 +17,6 @@ body {
 .rounded {
   border-radius: 12px;
 }
-.v-align {
-  vertical-align: middle;
-}
 .btn {
   background: rgb(2, 0, 36);
   background: linear-gradient(
@@ -28,7 +25,6 @@ body {
     rgba(9, 9, 121, 1) 29%,
     rgba(0, 212, 255, 1) 100%
   );
-  /* background-color: rgb(0, 17, 255) !important; */
   width: 7rem;
   border-radius: 6px;
   color: antiquewhite;
@@ -130,12 +126,12 @@ body {
   color: hsl(180, 82%, 69%);
 }
 /* ballon end */
-/* #heart {
+#heart {
   position: absolute;
   width: 100px;
   height: 100px;
-} */
-/* #heart:before,
+}
+#heart:before,
 #heart:after {
   position: absolute;
   content: "";
@@ -152,4 +148,4 @@ body {
   left: 0;
   transform: rotate(45deg);
   transform-origin: 100% 100%;
-} */
+}
