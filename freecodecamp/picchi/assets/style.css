@@ -126,7 +126,7 @@ body {
   color: hsl(180, 82%, 69%);
 }
 /* ballon end */
-#heart {
+/* #heart {
   position: absolute;
   width: 100px;
   height: 100px;
@@ -148,4 +148,4 @@ body {
   left: 0;
   transform: rotate(45deg);
   transform-origin: 100% 100%;
-}
+} */
