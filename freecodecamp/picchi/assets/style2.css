@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Acme&family=Kalam&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
 :root {
   --burg: rgba(182, 15, 97, 0.9);
   --orange: rgba(242, 112, 45, 0.9);
@@ -8,13 +12,20 @@
   --green: rgba(180, 224, 67, 0.9);
   --yellow: rgba(242, 194, 58, 0.9);
 }
+body {
+  background-image: url(./bghbd.png);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 span {
   text-transform: uppercase;
 }
 .container {
   font-family: "Acme", sans-serif;
   width: 800px;
-  height: 400px;
+  height: 340px;
   padding: 10px;
   margin: 0 auto;
   position: relative;
@@ -152,7 +163,7 @@ span {
   font-weight: 100;
   letter-spacing: 1.5px;
   line-height: 2rem;
-  color: rgb(23, 64, 245);
+  color: rgb(0, 46, 253);
 }
 
 /*BALLOON 1 4*/
