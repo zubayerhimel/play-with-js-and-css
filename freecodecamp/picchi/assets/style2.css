@@ -19,6 +19,14 @@
   background-repeat: repeat-y;
   background-size: cover;
 } */
+#blob1 {
+  height: 300px;
+  width: 300px;
+  top: 10%;
+  left: 10%;
+  position: absolute;
+  z-index: -1;
+}
 span {
   text-transform: uppercase;
 }

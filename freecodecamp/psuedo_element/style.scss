@@ -1,0 +1,259 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+main {
+  padding: 5em;
+}
+a[data-tool-tip] {
+  position: relative;
+}
+a[data-tool-tip]::after {
+  content: attr(data-tool-tip);
+  display: block;
+  position: absolute;
+  background-color: rgb(66, 64, 64);
+  padding: 1em 2em;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.75em;
+  bottom: 0;
+  left: 0;
+  white-space: nowrap;
+  transform: scale(0);
+  transition: transform ease-out 175ms, bottom ease-out 175ms;
+}
+a[data-tool-tip]:hover::after {
+  transform: scale(1);
+  bottom: 100%;
+}
+#mainSection {
+  text-align: center;
+}
+.section-deco::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: " \f0e7";
+  display: block;
+  margin-bottom: 5px;
+}
+a[href^="http"]::after {
+  font-family: FontAwesome;
+  content: "\f095";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+}
+.counters {
+  background: seashell;
+  text-align: left;
+  padding: 2em 8em;
+  margin-top: 7em;
+  counter-reset: counter-name;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px 2px rgb(190, 187, 187);
+}
+.section {
+  position: relative;
+}
+.section::before {
+  counter-increment: counter-name;
+  content: counter(counter-name);
+  position: absolute;
+  left: -2.5em;
+  border-radius: 50%;
+  background: rgb(0, 0, 0);
+  color: white;
+  width: 1.5em;
+  height: 1.5em;
+  top: -0.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(248, 0, 62);
+}
+@import url("https://fonts.googleapis.com/css?family=Unica+One|Vollkorn");
+
+$ff-ss: "Unica One";
+$ff-s: "Vollkorn";
+
+$clr-red: #c31;
+$clr-black: rgba(black, 1);
+$clr-gray: rgba(black, 0.7);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  text-align: center;
+  font-family: $ff-s;
+  line-height: 1.4;
+  color: $clr-gray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $ff-ss;
+  text-transform: uppercase;
+  line-height: 0.9;
+  color: #c31;
+}
+
+.intro {
+  position: relative;
+  display: inline-block;
+}
+
+h1::before,
+h1::after {
+  content: "";
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
+h1::before {
+  background: $clr-red;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
+}
+
+h1::after {
+  height: 101%;
+  background: white;
+  left: -0.1em;
+  right: -0.1em;
+  z-index: -1;
+}
+
+h2 {
+  margin-top: 1.2em;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0.25em;
+}
+
+a {
+  color: $clr-red;
+}
+
+.intro {
+  font-size: 4rem;
+}
+
+blockquote {
+  font-size: 2rem;
+  color: $clr-black;
+
+  &::before {
+    content: open-quote;
+  }
+
+  &::after {
+    content: close-quote;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  margin: 1em;
+  background: $clr-gray;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 1.25em;
+    bottom: 1.25em;
+    left: 1.25em;
+    right: 1.25em;
+    opacity: 1;
+    transition: transform ease-out 250ms;
+  }
+
+  &::before {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    transform: scale(0, 1);
+  }
+
+  &::after {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    transform: scale(1, 0);
+  }
+
+  &:hover::before {
+    transform: scale(1.05, 1);
+  }
+
+  &:hover::after {
+    transform: scale(1, 1.05);
+  }
+}
+
+.card__img {
+  max-width: 100%;
+  display: block;
+  transition: opacity ease-out 250ms;
+}
+
+.card:hover {
+  .card__img {
+    opacity: 0.4;
+  }
+}
+
+.card__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  transition: opacity ease-out 250ms;
+}
+
+.card:hover .card__text {
+  opacity: 1;
+}
+
+.card__title {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 0;
+}
+
+.source {
+  opacity: 0.8;
+  position: absolute;
+  width: 100%;
+  bottom: 1em;
+}

@@ -14,7 +14,7 @@ body {
   text-shadow: -2px -4px 6px rgba(150, 150, 150, 0.81);
 }
 .font-gradient {
-  background: -webkit-linear-gradient(rgb(12, 12, 12), rgb(255, 0, 0));
+  background: -webkit-linear-gradient(90deg, rgb(0, 57, 245), rgb(204, 0, 245), rgb(6, 8, 8));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
