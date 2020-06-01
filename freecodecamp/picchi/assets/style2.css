@@ -27,6 +27,7 @@
   position: absolute;
   z-index: -1;
 }
+
 span {
   text-transform: uppercase;
 }
@@ -165,15 +166,41 @@ span {
 }
 #msg {
   margin-top: 0.5em;
-  margin-left: 6em;
-  margin-right: 6em;
+  margin-left: 8em;
+  margin-right: 8em;
   font-family: "Baloo 2", cursive;
   font-weight: 100;
   letter-spacing: 1.5px;
   line-height: 2rem;
   color: rgb(0, 46, 253);
+  text-align: justify;
 }
-
+#cat-img {
+  height: 250px;
+  width: 320px;
+  position: absolute;
+  right: 0;
+  top: 2%;
+  animation: fadein 2s;
+}
+#cat-img2 {
+  height: 230px;
+  width: 220px;
+  position: absolute;
+  left: 3%;
+  top: 2%;
+  animation: fadein 2s;
+}
+#billu-cake {
+  height: 500px;
+  width: auto;
+  right: 20%;
+  position: absolute;
+}
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 /*BALLOON 1 4*/
 @-webkit-keyframes balloon1 {
   0%,
@@ -342,11 +369,11 @@ h2 {
   color: rgb(40, 37, 233);
   text-shadow: 1px 3px 9px rgb(94, 95, 97);
 }
-.pos {
+/* .pos {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+} */
 
 .cake {
   position: absolute;
