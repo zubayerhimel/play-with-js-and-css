@@ -181,7 +181,7 @@ span {
   position: absolute;
   right: 0;
   top: 2%;
-  animation: fadein 2s;
+  /* animation: fadein 2s; */
 }
 #cat-img2 {
   height: 230px;
@@ -189,7 +189,7 @@ span {
   position: absolute;
   left: 3%;
   top: 2%;
-  animation: fadein 2s;
+  /* animation: fadein 2s; */
 }
 #billu-cake {
   height: 500px;
@@ -197,10 +197,10 @@ span {
   right: 20%;
   position: absolute;
 }
-@keyframes fadein {
+/* @keyframes fadein {
   from {opacity: 0;}
   to {opacity: 1;}
-}
+} */
 /*BALLOON 1 4*/
 @-webkit-keyframes balloon1 {
   0%,
