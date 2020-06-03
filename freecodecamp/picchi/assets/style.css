@@ -9,6 +9,7 @@ body {
 }
 #cat-img {
   height: 630px;
+  width: 2px;
   width: auto;
   position: absolute;
   left: 0;

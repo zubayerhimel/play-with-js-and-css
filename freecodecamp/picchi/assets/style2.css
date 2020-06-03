@@ -197,6 +197,12 @@ span {
   right: 20%;
   position: absolute;
 }
+#billu7 {
+  height: auto;
+  width: 230px;
+  right: 10%;
+  position: absolute;
+}
 /* @keyframes fadein {
   from {opacity: 0;}
   to {opacity: 1;}
