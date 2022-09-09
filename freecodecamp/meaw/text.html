@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML5 Canvas Explode Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta
+      name="viewport"
+      content="width=320 initial-scale=1.0, user-scalable=no"
+    />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      canvas {
+        display: block;
+        background: whiteSmoke;
+        width: 100%;
+        height: 100%;
+      }
+      #presentation {
+        position: fixed;
+        background: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 70px;
+        box-shadow: 7px 7px 13px rgba(0, 0, 0, 0.3);
+        color: white;
+        font-family: futura;
+        font-size: 30px;
+        padding-left: 50px;
+        padding-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="output"></canvas>
+
+    <script type="text/javascript">
+      jQuery(document).ready(function () {
+        $("body").click(function (e) {
+          BOOM(e.pageX, e.pageY);
+        });
+      });
+      window.requestAnimationFrame = (function () {
+        return (
+          window.requestAnimationFrame ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame ||
+          window.msRequestAnimationFrame ||
+          window.oRequestAnimationFrame ||
+          function (f) {
+            window.setTimeout(f, 1e3 / 60);
+          }
+        );
+      })();
+
+      var canvas = document.querySelector("canvas");
+      var ctx = canvas.getContext("2d");
+
+      function BOOM(actualX, actualY) {
+        // Shim with setTimeout fallback
+
+        var laX = actualX;
+        var laY = actualY;
+        var W = (canvas.width = window.innerWidth);
+        var H = (canvas.height = window.innerHeight);
+        // Let's set our gravity
+        var gravity = 0.3;
+
+        // Time to write a neat constructor for our
+        // particles.
+        // Lets initialize a random color to use for
+        // our particles and also define the particle
+        // count.
+        var particle_count = parseInt(Math.random() * 1000);
+        var particles = [];
+
+        var colors = ["#000000", "#fe5e31"];
+        var random_color = colors[Math.floor(Math.random() * colors.length)];
+
+        function Particle() {
+          this.radius = parseInt(Math.random() * 10);
+          this.x = actualX;
+          this.y = actualY;
+
+          this.color = random_color;
+
+          // Random Initial Velocities
+          this.vx = Math.random() * 20 - 10;
+          // vy should be negative initially
+          // then only will it move upwards first
+          // and then later come downwards when our
+          // gravity is added to it.
+          this.vy = Math.random() * -14 - 1;
+
+          // Finally, the function to draw
+          // our particle
+          this.draw = function () {
+            ctx.fillStyle = this.color;
+
+            ctx.beginPath();
+
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+            ctx.fill();
+
+            ctx.closePath();
+          };
+        }
+
+        // Now lets quickly create our particle
+        // objects and store them in particles array
+        for (var i = 0; i < particle_count; i++) {
+          var particle = new Particle();
+          particles.push(particle);
+        }
+
+        // Finally, writing down the code to animate!
+        (function renderFrame() {
+          requestAnimationFrame(renderFrame);
+
+          // Clearing screen to prevent trails
+          ctx.clearRect(0, 0, W, H);
+
+          particles.forEach(function (particle) {
+            // The particles simply go upwards
+            // It MUST come down, so lets apply gravity
+            particle.vy += gravity;
+
+            // Adding velocity to x and y axis
+            particle.x += particle.vx;
+            particle.y += particle.vy;
+
+            // We're almost done! All we need to do now
+            // is to reposition the particles as soon
+            // as they move off the canvas.
+            // We'll also need to re-set the velocities
+
+            particle.draw();
+          });
+        })();
+      }
+    </script>
+  </body>
+</html>
